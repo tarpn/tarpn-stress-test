@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["tarpn"]
+
+[tool.setuptools_scm]
+
+[project]
+dynamic = ["version"]
+name = "tarpn-stress-test"
+description = "Command line utility for stress testing a TARPN packet link"
+authors = [
+    {name = "David Arthur", email = "mumrah@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Communications :: Ham Radio"
+]
+requires-python = ">=3.7"
+dependencies = [
+    "telnetlib3~=2.0"
+]
+
+[project.scripts]
+tarpn-stress-test = "tarpn.tarpn_stress_test:main"

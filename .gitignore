@@ -1,0 +1,5 @@
+.idea
+.twine.env
+venv
+dist
+*.egg-info
